@@ -1,0 +1,28 @@
+apiVersion: v2
+dependencies:
+- condition: eck-elasticsearch.enabled
+  name: eck-elasticsearch
+  repository: https://helm.elastic.co
+  version: 0.2.0
+- condition: eck-kibana.enabled
+  name: eck-kibana
+  repository: https://helm.elastic.co
+  version: 0.2.0
+- condition: eck-agent.enabled
+  name: eck-agent
+  repository: https://helm.elastic.co
+  version: 0.2.0
+- condition: eck-fleet-server.enabled
+  name: eck-fleet-server
+  repository: https://helm.elastic.co
+  version: 0.2.0
+- condition: eck-beats.enabled
+  name: eck-beats
+  repository: https://helm.elastic.co
+  version: 0.1.0
+description: 'A Parent Helm chart for all Elastic stack resources managed by the ECK
+  Operator. Currently supported: * Elasticsearch * Kibana * Agent * Fleet Server '
+kubeVersion: '>= 1.21.0-0'
+name: eck-stack
+type: application
+version: 0.3.0
